@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import SocketIO
 
-let kHost = "http://192.168.1.10:8080"
+let kHost = "http://192.168.1.10"
 let kConnectUser = "connectUser"
 let kUserList = "userList"
 let kExitUser = "exitUser"
