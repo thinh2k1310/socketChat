@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import SocketIO
 
-let kHost = "http://192.168.1.10"
+let kHost = "https://thinh-socket-chat-server.herokuapp.com/"
 let kConnectUser = "connectUser"
 let kUserList = "userList"
 let kExitUser = "exitUser"
