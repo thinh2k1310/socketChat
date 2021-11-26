@@ -1,10 +1,4 @@
-//
-//  MessageViewModel.swift
-//  socket_demo
-//
-//  Created by Krishna Soni on 01/01/20.
-//  Copyright © 2020 Krishna Soni. All rights reserved.
-//
+
 
 import Foundation
 

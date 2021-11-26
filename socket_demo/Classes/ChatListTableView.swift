@@ -1,10 +1,4 @@
-//
-//  ChatListTableView.swift
-//  Socket_demo
-//
-//  Created by Krishna Soni on 30/12/19.
-//  Copyright © 2019 Krishna Soni. All rights reserved.
-//
+
 
 import UIKit
 

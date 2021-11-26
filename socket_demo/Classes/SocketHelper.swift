@@ -1,10 +1,4 @@
-//
-//  SocketHelper.swift
-//  Socket_demo
-//
-//  Created by Krishna Soni on 06/12/19.
-//  Copyright © 2019 Krishna Soni. All rights reserved.
-//
+
 
 import UIKit
 import Foundation
@@ -109,6 +103,33 @@ final class SocketHelper: NSObject {
         
     }
     
+    func isUserExit (_ name: String , completionHandler: @escaping (Bool) -> Void) {
+        var userModel : [User]?
+        guard let socket = manager?.defaultSocket else {
+            return
+        }
+        socket.on(kUserList) { [weak self] (result, ack) -> Void in
+                guard result.count > 0,
+                    let _ = self,
+                    let user = result.first as? [[String: Any]],
+                    let data = UIApplication.jsonData(from: user) else {
+                        return
+                }
+                do {
+                    userModel = try JSONDecoder().decode([User].self, from: data)
+                    for user in userModel!{
+                        if name == user.nickname{
+                        completionHandler(true)
+                        }
+                    }
+                    completionHandler(false)
+                    }
+                catch let error {
+                    print("Something happen wrong here...\(error)")
+                }
+        }
+     
+    }
     func getMessage(completion: @escaping (_ messageInfo: Message?) -> Void) {
         
         guard let socket = manager?.defaultSocket else {

@@ -1,10 +1,3 @@
-//
-//  ChatDetailViewController.swift
-//  Socket_demo
-//
-//  Created by Krishna Soni on 30/12/19.
-//  Copyright © 2019 Krishna Soni. All rights reserved.
-//
 
 import UIKit
 
@@ -53,9 +46,17 @@ class ChatDetailViewController: UIViewController {
         
         title = user.nickname
     }
+    @IBAction func chooseImage(_ sender: UIButton) {
+        let vc = UIImagePickerController()
+        vc.sourceType = .photoLibrary
+        vc.delegate = self
+        vc.allowsEditing = true
+        present(vc,animated: true)
+        
+    }
 }
 
-// MARK:- Action Evetns -
+// MARK:- Action Events -
 extension ChatDetailViewController {
     
     @IBAction func btnSendCLK(_ sender: UIButton) {
@@ -70,5 +71,17 @@ extension ChatDetailViewController {
         txtMessage.resignFirstResponder()
         SocketHelper.shared.sendMessage(message: message, withNickname: name)
         txtMessage.text = nil
+    }
+}
+// MARK:- Send image
+extension ChatDetailViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")]{
+            print("\(info)")
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
     }
 }
