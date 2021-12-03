@@ -14,7 +14,7 @@ class ChatDetailViewController: UIViewController {
         }
     }
     
-    var user: User?
+    //var user: User?
     var nickName: String?
     
     @IBOutlet weak var txtMessage: UITextView! {
@@ -40,30 +40,21 @@ class ChatDetailViewController: UIViewController {
     
     private func configureNavigation() {
         
-        guard let user = user else {
-            return
-        }
+//        guard let user = user else {
+//            return
+//        }
         
-        title = user.nickname
+        title = "Welcome \(nickName ?? "!")"
     }
-    @IBAction func chooseImage(_ sender: UIButton) {
-        let vc = UIImagePickerController()
-        vc.sourceType = .photoLibrary
-        vc.delegate = self
-        vc.allowsEditing = true
-        present(vc,animated: true)
-        
-    }
-}
 
+}
 // MARK:- Action Events -
 extension ChatDetailViewController {
     
     @IBAction func btnSendCLK(_ sender: UIButton) {
         
-        guard txtMessage.text.count > 0,
-            let message = txtMessage.text,
-            let name = nickName else {
+        guard txtMessage.text.count > 0, let message = txtMessage.text, let name = nickName
+            else {
             print("Please type your message.")
             return
         }
@@ -73,15 +64,5 @@ extension ChatDetailViewController {
         txtMessage.text = nil
     }
 }
-// MARK:- Send image
-extension ChatDetailViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")]{
-            print("\(info)")
-        }
-        picker.dismiss(animated: true, completion: nil)
-    }
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
-    }
-}
+
+

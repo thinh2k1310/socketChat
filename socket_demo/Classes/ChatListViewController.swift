@@ -75,7 +75,7 @@ extension ChatListViewController {
             guard let chatDetailViewController = storyboard.instantiateViewController(withIdentifier: "ChatDetailViewController") as? ChatDetailViewController else{
                 return
             }
-            chatDetailViewController.user = user
+            // chatDetailViewController.user = user
             chatDetailViewController.nickName = name
             self.navigationController?.pushViewController(chatDetailViewController, animated: true)
         }

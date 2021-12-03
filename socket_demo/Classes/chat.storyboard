@@ -37,7 +37,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7xK-wC-hdD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="270" y="704"/>
+            <point key="canvasLocation" x="2789.8550724637685" y="703.79464285714278"/>
         </scene>
         <!--Chat Detail View Controller-->
         <scene sceneID="cGc-3X-qxA">
@@ -48,26 +48,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P2v-io-009" customClass="ChatDetailsTableView" customModule="socket_demo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="758"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="714"/>
                                 <color key="backgroundColor" red="0.9137254901960784" green="0.90980392156862744" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="upt-u4-8M3">
                                 <rect key="frame" x="0.0" y="802" width="414" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Bo-4K-T4m">
-                                        <rect key="frame" x="0.0" y="10" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="sKT-sz-UHI"/>
-                                            <constraint firstAttribute="height" constant="50" id="taf-jw-Ci5"/>
-                                        </constraints>
-                                        <state key="normal" image="select_image"/>
-                                        <connections>
-                                            <action selector="btnSendCLK:" destination="5HH-1X-dvw" eventType="touchUpInside" id="JRi-mf-feZ"/>
-                                            <action selector="chooseImage:" destination="5HH-1X-dvw" eventType="touchUpInside" id="PNa-yt-f4f"/>
-                                        </connections>
-                                    </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yti-6J-df0">
-                                        <rect key="frame" x="60" y="15" width="279" height="30"/>
+                                        <rect key="frame" x="15" y="15" width="324" height="30"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -87,13 +75,11 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="4Bo-4K-T4m" secondAttribute="bottom" id="3Gf-Tg-eT4"/>
-                                    <constraint firstItem="yti-6J-df0" firstAttribute="leading" secondItem="upt-u4-8M3" secondAttribute="leading" constant="60" id="4DP-7f-FM4"/>
-                                    <constraint firstItem="4Bo-4K-T4m" firstAttribute="leading" secondItem="upt-u4-8M3" secondAttribute="leading" id="K5k-kB-52R"/>
                                     <constraint firstItem="Ife-wj-rQY" firstAttribute="leading" secondItem="yti-6J-df0" secondAttribute="trailing" constant="10" id="STQ-xc-Zra"/>
                                     <constraint firstAttribute="bottom" secondItem="yti-6J-df0" secondAttribute="bottom" constant="15" id="SVv-z8-R6U"/>
                                     <constraint firstItem="Ife-wj-rQY" firstAttribute="centerY" secondItem="upt-u4-8M3" secondAttribute="centerY" id="guX-eS-jtT"/>
                                     <constraint firstAttribute="height" constant="60" id="mAm-Rx-PzA"/>
+                                    <constraint firstItem="yti-6J-df0" firstAttribute="leading" secondItem="upt-u4-8M3" secondAttribute="leading" constant="15" id="odY-f7-vbp"/>
                                     <constraint firstItem="yti-6J-df0" firstAttribute="top" secondItem="upt-u4-8M3" secondAttribute="top" constant="15" id="vLp-Sr-Idu"/>
                                     <constraint firstAttribute="trailing" secondItem="Ife-wj-rQY" secondAttribute="trailing" constant="15" id="zwG-3H-Qzq"/>
                                 </constraints>
@@ -111,6 +97,7 @@
                             <constraint firstItem="YYU-Ce-bcc" firstAttribute="trailing" secondItem="upt-u4-8M3" secondAttribute="trailing" id="orL-KV-HqB"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="VX7-g7-cwe"/>
                     <connections>
                         <outlet property="tblChat" destination="P2v-io-009" id="PLB-RA-mP2"/>
                         <outlet property="txtMessage" destination="yti-6J-df0" id="YzJ-h9-Uob"/>
@@ -118,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iLD-Wc-n13" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1243" y="704"/>
+            <point key="canvasLocation" x="1495.6521739130435" y="703.79464285714278"/>
         </scene>
         <!--Join Chat View Controller-->
         <scene sceneID="ECp-9M-a8b">
@@ -148,14 +135,35 @@
                             <constraint firstItem="Kc4-WW-gZJ" firstAttribute="centerX" secondItem="IHy-DC-AEi" secondAttribute="centerX" id="URu-7M-Qcx"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="4LD-yf-Kzo"/>
+                    <connections>
+                        <segue destination="5HH-1X-dvw" kind="show" identifier="welcomeToChat" id="oRT-FZ-V7r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zs7-wm-0ag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-728" y="704"/>
+            <point key="canvasLocation" x="181.15942028985509" y="703.79464285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="m0J-pQ-aQf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="les-GM-jya" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aNh-ZH-mav">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xPE-cl-sqa" kind="relationship" relationship="rootViewController" id="gZF-7u-Wm3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TYu-sY-zyb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-728.98550724637687" y="703.79464285714278"/>
         </scene>
     </scenes>
     <resources>
-        <image name="select_image" width="512" height="512"/>
         <image name="send" width="30" height="30"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

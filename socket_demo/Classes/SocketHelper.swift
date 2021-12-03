@@ -102,7 +102,7 @@ final class SocketHelper: NSObject {
         }
         
     }
-    
+
     func isUserExit (_ name: String , completionHandler: @escaping (Bool) -> Void) {
         var userModel : [User]?
         guard let socket = manager?.defaultSocket else {

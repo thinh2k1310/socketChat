@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -44,25 +45,35 @@
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQb-IQ-ptS">
+                        <rect key="frame" x="87.5" y="87.5" width="38" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
+                    <constraint firstItem="RQb-IQ-ptS" firstAttribute="leading" secondItem="sAb-yn-FKm" secondAttribute="trailing" constant="15" id="7Fh-Jm-sEh"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qph-6B-n4V" secondAttribute="trailing" constant="50" id="AOI-J6-93A"/>
                     <constraint firstItem="qph-6B-n4V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Bok-em-Rk4"/>
+                    <constraint firstAttribute="bottom" secondItem="RQb-IQ-ptS" secondAttribute="bottom" constant="10" id="IdA-lz-Wr4"/>
                     <constraint firstItem="sAb-yn-FKm" firstAttribute="top" secondItem="qph-6B-n4V" secondAttribute="bottom" constant="5" id="a8Q-Po-MbO"/>
                     <constraint firstAttribute="bottom" secondItem="sAb-yn-FKm" secondAttribute="bottom" constant="10.5" id="be5-A4-sXj"/>
+                    <constraint firstItem="RQb-IQ-ptS" firstAttribute="top" secondItem="qph-6B-n4V" secondAttribute="bottom" constant="5" id="ewa-wB-5Sp"/>
                     <constraint firstItem="sAb-yn-FKm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="tvq-iD-GaF"/>
                     <constraint firstItem="qph-6B-n4V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="zEb-Z0-eS6"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="lblDate" destination="sAb-yn-FKm" id="ya6-tA-HCn"/>
                 <outlet property="lblMessage" destination="PvV-9B-zgH" id="qB8-RV-FfF"/>
+                <outlet property="lblSender" destination="RQb-IQ-ptS" id="biA-RK-GGE"/>
                 <outlet property="viewContainer" destination="qph-6B-n4V" id="w8H-y6-uUV"/>
             </connections>
-            <point key="canvasLocation" x="131.8840579710145" y="148.66071428571428"/>
+            <point key="canvasLocation" x="131.8840579710145" y="148.32589285714286"/>
         </tableViewCell>
     </objects>
 </document>

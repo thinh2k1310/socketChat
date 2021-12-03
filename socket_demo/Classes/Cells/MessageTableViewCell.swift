@@ -6,6 +6,7 @@ class MessageTableViewCell: UITableViewCell {
     
     @IBOutlet weak var lblMessage: UILabel!
     @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var lblSender: UILabel!
     
     @IBOutlet weak var viewContainer: UIView!{
         didSet {
@@ -21,6 +22,7 @@ class MessageTableViewCell: UITableViewCell {
         
         self.lblMessage.text = message.message ?? ""
         self.lblDate.text = message.date ?? ""
+        self.lblSender.text = message.nickname ?? ""
     }
     
 }
