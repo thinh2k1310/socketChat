@@ -35,6 +35,7 @@
 		48A15D3D23BB509C00B2DB66 /* MessageSendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A15D3B23BB509C00B2DB66 /* MessageSendTableViewCell.swift */; };
 		48A15D3E23BB509C00B2DB66 /* MessageSendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48A15D3C23BB509C00B2DB66 /* MessageSendTableViewCell.xib */; };
 		EF701F05BFA8E0FE49D6B797 /* Pods_socket_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 867C5695BCB6BD194234ADB5 /* Pods_socket_demo.framework */; };
+		F33B93AB275B52D000AAF9E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F33B93AA275B52D000AAF9E8 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		4AFAC9CA641735C1AEB64582 /* Pods-socket_demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socket_demo.debug.xcconfig"; path = "Target Support Files/Pods-socket_demo/Pods-socket_demo.debug.xcconfig"; sourceTree = "<group>"; };
 		867C5695BCB6BD194234ADB5 /* Pods_socket_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_socket_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50744BA2285EACD1E022E8B /* Pods-socket_demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socket_demo.release.xcconfig"; path = "Target Support Files/Pods-socket_demo/Pods-socket_demo.release.xcconfig"; sourceTree = "<group>"; };
+		F33B93AA275B52D000AAF9E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				4873048723B9D4B400328EEC /* Assets.xcassets */,
 				4873048923B9D4B400328EEC /* LaunchScreen.storyboard */,
 				4873048C23B9D4B400328EEC /* Info.plist */,
+				F33B93AA275B52D000AAF9E8 /* GoogleService-Info.plist */,
 				48304D3023BCA35C0052111F /* Data Binding */,
 				48269C8F23BA2FFC00A72F09 /* Extension */,
 				48269C8723B9DBA700A72F09 /* Model */,
@@ -228,6 +231,8 @@
 			dependencies = (
 			);
 			name = socket_demo;
+			packageProductDependencies = (
+			);
 			productName = socket_demo;
 			productReference = 4873047B23B9D4B200328EEC /* socket_demo.app */;
 			productType = "com.apple.product-type.application";
@@ -256,6 +261,8 @@
 				Base,
 			);
 			mainGroup = 4873047223B9D4B200328EEC;
+			packageReferences = (
+			);
 			productRefGroup = 4873047C23B9D4B200328EEC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -277,6 +284,7 @@
 				489F4C0A23BF3B5D00F10C54 /* chat.png in Resources */,
 				48A15D3E23BB509C00B2DB66 /* MessageSendTableViewCell.xib in Resources */,
 				4873049323B9D50B00328EEC /* chat.storyboard in Resources */,
+				F33B93AB275B52D000AAF9E8 /* GoogleService-Info.plist in Resources */,
 				4873048823B9D4B400328EEC /* Assets.xcassets in Resources */,
 				489F4C1123BF3D9500F10C54 /* join_chat.png in Resources */,
 			);
@@ -492,7 +500,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.socket-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thinh.socketchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -511,7 +519,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.socket-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thinh.socketchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

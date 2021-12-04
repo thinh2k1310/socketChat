@@ -3,6 +3,7 @@
 import UIKit
 import Foundation
 import SocketIO
+import Firebase
 
 let kHost = "https://thinh-socket-chat-server.herokuapp.com/"
 let kConnectUser = "connectUser"
@@ -11,6 +12,7 @@ let kExitUser = "exitUser"
 
 
 final class SocketHelper: NSObject {
+    let db = Firestore.firestore()
     
     static let shared = SocketHelper()
     
@@ -164,7 +166,6 @@ final class SocketHelper: NSObject {
             }
         }
     }
-    
     func sendMessage(message: String, withNickname nickname: String) {
         
         guard let socket = manager?.defaultSocket else {

@@ -8,5 +8,6 @@ target 'socket_demo' do
   # Pods for socket_demo
   pod 'Socket.IO-Client-Swift'
   pod 'IQKeyboardManagerSwift'
+  pod 'Firebase/Firestore'
 
 end

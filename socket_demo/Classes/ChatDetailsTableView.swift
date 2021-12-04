@@ -34,7 +34,7 @@ class ChatDetailsTableView: UITableView, UITableViewDelegate, UITableViewDataSou
             self.reloadData()
             self.scrollToBottom(animated: false)
         }
-        
+        messageViewModel.loadMessagesFromDatabase()
         messageViewModel.getMessagesFromServer()
     }
 }
