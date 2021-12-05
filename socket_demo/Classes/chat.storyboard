@@ -9,36 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Chat List View Controller-->
-        <scene sceneID="Suy-Fc-n6e">
-            <objects>
-                <viewController storyboardIdentifier="ChatListViewController" id="UJT-Og-fLl" customClass="ChatListViewController" customModule="socket_demo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="N2O-jN-u1H">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VYG-1z-QeA" customClass="ChatListTableView" customModule="socket_demo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="W2U-Hl-Ybl"/>
-                        <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="W2U-Hl-Ybl" firstAttribute="trailing" secondItem="VYG-1z-QeA" secondAttribute="trailing" id="A7D-Ke-Xed"/>
-                            <constraint firstItem="VYG-1z-QeA" firstAttribute="leading" secondItem="W2U-Hl-Ybl" secondAttribute="leading" id="RWX-gZ-LqO"/>
-                            <constraint firstItem="VYG-1z-QeA" firstAttribute="top" secondItem="W2U-Hl-Ybl" secondAttribute="top" id="Vte-4J-Whj"/>
-                            <constraint firstItem="W2U-Hl-Ybl" firstAttribute="bottom" secondItem="VYG-1z-QeA" secondAttribute="bottom" id="b7o-V6-YDf"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="tblChatList" destination="VYG-1z-QeA" id="Poj-fJ-oud"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7xK-wC-hdD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2789.8550724637685" y="703.79464285714278"/>
-        </scene>
         <!--Chat Detail View Controller-->
         <scene sceneID="cGc-3X-qxA">
             <objects>
@@ -117,12 +87,14 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kc4-WW-gZJ">
                                 <rect key="frame" x="138.5" y="425" width="137" height="46"/>
-                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="137" id="uod-ac-VOd"/>
                                     <constraint firstAttribute="height" constant="46" id="urb-Dk-GFZ"/>
                                 </constraints>
-                                <state key="normal" title="JOIN CHAT"/>
+                                <state key="normal" title="JOIN CHAT">
+                                    <color key="titleColor" systemColor="tintColor"/>
+                                </state>
                                 <connections>
                                     <action selector="btnJoinCLK:" destination="xPE-cl-sqa" eventType="touchUpInside" id="84T-OL-9d4"/>
                                 </connections>
@@ -168,11 +140,14 @@
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

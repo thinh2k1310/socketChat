@@ -3,7 +3,6 @@
 import UIKit
 import Foundation
 import SocketIO
-import Firebase
 
 let kHost = "https://thinh-socket-chat-server.herokuapp.com/"
 let kConnectUser = "connectUser"
@@ -12,8 +11,7 @@ let kExitUser = "exitUser"
 
 
 final class SocketHelper: NSObject {
-    let db = Firestore.firestore()
-    
+   
     static let shared = SocketHelper()
     
     private var manager: SocketManager?
@@ -104,7 +102,7 @@ final class SocketHelper: NSObject {
         }
         
     }
-
+    
     func isUserExit (_ name: String , completionHandler: @escaping (Bool) -> Void) {
         var userModel : [User]?
         guard let socket = manager?.defaultSocket else {
